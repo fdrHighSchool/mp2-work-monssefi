@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner i = new Scanner(System.in);
+    int g;
+    System.out.println("Enter your student name: ");
+    String user =i.nextLine();
+    System.out.println("Enter a your grade: ");
+    g = i.nextInt();
+    System.out.println("your letter grade is "+letter(g));
+    
+    
+    }
+
+    // getNumericGrade method to return grade number
+    public static String letter(int g) {
+       String l="";
+        if(g>=100) {
+            l+="A+";
+        } else if(g>=90) {
+            l+="A";
+        } else if(g==89||g>=80) {
+            l+="B";
+        } else if(g==79||g>=70) {
+            l+="C";
+        } else if(g==69||g>65) {
+            l+="D";
+        } else if(g==64||g>=1) {
+            l+="F";
+        } else {
+            System.out.println("Invalid letter grade");
+        }
+
+        return l;
+    }
+ }
