@@ -1,0 +1,90 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner i = new Scanner(System.in);
+    int l;
+    int w;
+    int h;
+    int r;
+    double d;
+    int ss;
+    System.out.println("Enter square/rectangle,rtriangle,triangle, or circle: ");
+    String e=i.nextLine();
+    if (e.equals("rtriangle")){
+      System.out.println("Enter a symbol: ");
+      String c=i.nextLine();
+      System.out.println("Enter a number for height: ");
+      h=i.nextInt();
+      rtriangle(h, c);
+    }
+    else if (e.equals("triangle")){
+      System.out.println("Enter a symbol: ");
+      String c=i.nextLine();
+      System.out.println("Enter a number for the spacing: ");
+      ss=i.nextInt();
+      triangle(ss, c);
+    }
+    else if (e.equals("circle")){
+      System.out.println("Enter a symbol: ");
+      String c=i.nextLine();
+      System.out.println("Enter a number for radius: ");
+      r=i.nextInt();
+      for(int rr=0;rr<=2 * r; rr++)
+        {
+        for(int s=0; s<=2*r; s++)
+         {
+      d = Math.sqrt((rr-r) * (rr-r)+ (s-r) * (s-r));
+          if(d > r-0.5 && d < r+0.5)
+              System.out.print(c);
+             else
+              System.out.print(" ");
+            }
+            System.out.println();    
+            //Prints a newline
+        }
+    }
+    else{
+      System.out.println("Enter a symbol: ");
+      String c=i.nextLine();
+      System.out.println("Enter a number for row: ");
+      l=i.nextInt();
+      System.out.println("Enter a number for column: ");
+      w= i.nextInt();
+  
+      reactangle(l, w, c);
+    }
+  }
+  public static void reactangle(int l,int w, String c){
+    for(int row=0; row<l; row++){
+      for(int col=0; col<w; col++){
+        System.out.print(" "+c+" ");
+      }
+        System.out.println();
+    }
+  }
+
+  public static void triangle(int ss, String c) {
+      for(int i=1;i<=10;i++){
+         for(int j=1;j<=ss-i;j++){
+          System.out.print(" ");
+        }
+         for(int j=1;j<=2*i-1;j++){
+            System.out.print(c);
+      }
+      System.out.println();
+      }
+      
+     }
+  
+  public static void rtriangle(int h, String c){
+    for (int i = 1; i <= h; i++) {
+      for (int j = 1; j <= i; j++) {
+          System.out.print(c+" ");
+        }
+        System.out.println();
+    }
+  }
+  
+
+}
+
