@@ -9,7 +9,7 @@
 
 
 2. Discuss how you would make sure 100 is not misrepresented as an A-.
-  * **YOUR WRITING HERE**
+  * you just say that if grade is <=  to 100 then print A+.
 
 
 3. Discuss how you would make sure grades that are an F are not mislabeled as F- or F+ (eg: 49 -> F+ and 52 -> F-)
