@@ -9,29 +9,29 @@
       } // end inner if statement
    } // end outer if statement
   ```
-  * **YOUR WRITING HERE**
+  * incorrect
 
 
 2. Label each as either correct or incorrect syntax. If incorrect, rewrite below:
   * if (x == y) {
 
-    * **YOUR WRITING HERE**
+    * correct
 
   * if [x == 10] {
 
-    * **YOUR WRITING HERE**
+    * incorrect
 
   * if x = 10 then {
 
-    * **YOUR WRITING HERE**
+    * incorrect
 
   * if (x equals 42) {
 
-    * **YOUR WRITING HERE**
+    * incorrect
 
   * if (x => y) {
 
-    * **YOUR WRITING HERE**
+    * incorrect
 
 
 3. Fix the error in the code below:
@@ -39,10 +39,10 @@
   ```
   Scanner console = new Scanner(System.in);
   System.out.print("What is your favorite color? ");
-  String name = console.next();
+  String name = console.next();-------------------------> its suppose to be console.nextLine();
   if (name == "blue") {
       System.out.println("Mine, too!");
   }
   ```
 
-  * **YOUR WRITING HERE**
+  * incorrect
