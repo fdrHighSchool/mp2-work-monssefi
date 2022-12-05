@@ -2,25 +2,27 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     Scanner i = new Scanner(System.in);
-    int n,sum;
+    int n;
+    int sum=0;
     System.out.println("Enter your user: ");
     String user =i.nextLine();
     System.out.println("Enter a number: ");
     n = i.nextInt();
-    System.out.println(user+" the output is "+d(n));
+    System.out.println(user+" the output is "+d(n,sum));
   }
 
-  public static boolean d(int n){
-    if (n%3==0){
-      return true;
+  public static boolean d(int n,int sum){
+      while (sum==0) {
+        int digit = n % 10;
+        sum += digit;
+        n /= 10;
+      if(sum%3==0){
+        return true;
+      }
+     }
+        return false;
     }
-    else{
-      return false;
-    }
-  }
-
-
   
-}
 
+}
   
